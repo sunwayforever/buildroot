@@ -3,6 +3,11 @@
 # 2022-10-13 22:13
 import tensorflow as tf
 
+# workaround: disable grappler
+opts = tf.config.optimizer.get_experimental_options()
+opts["disable_meta_optimizer"]=True
+tf.config.optimizer.set_experimental_options(opts)
+
 mnist = tf.keras.datasets.mnist
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 x_train, x_test = x_train / 255.0, x_test / 255.0
