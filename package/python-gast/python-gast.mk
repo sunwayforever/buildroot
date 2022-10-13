@@ -11,4 +11,4 @@ PYTHON_GAST_SETUP_TYPE = setuptools
 PYTHON_GAST_LICENSE = BSD-3-Clause
 PYTHON_GAST_LICENSE_FILES = LICENSE
 
-$(eval $(host-python-package))
+$(eval $(python-package))
